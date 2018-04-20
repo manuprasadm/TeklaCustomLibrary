@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tekla.Structures.Geometry3d;
 using Tekla.Structures.Model;
 using Tekla.Structures.Model.UI;
 using static TeklaLibrary;
@@ -22,11 +23,15 @@ namespace TeklaLibraryTest
 
         private void TestBtn_Click(object sender, EventArgs e)
         {
+            ResetWorkPlane();
+
+            var beam = PickOneObject<Beam>("Pick beam...");
+
+            var coordSys = beam.GetCoordinateSystem();
 
 
-            var objects = GetObjects<ContourPlate>(false, progressBar1).ToList();
+            var vector = coordSys.AxisX;
 
-            SaveModel();
 
         }
     }
