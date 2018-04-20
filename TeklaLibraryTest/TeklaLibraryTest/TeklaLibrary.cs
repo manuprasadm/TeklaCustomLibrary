@@ -10,7 +10,7 @@ using TSMUI = Tekla.Structures.Model.UI;
 /// This library contains some useful method for Tekla open API
 /// Author: Manuprasad M
 /// Company: Aarbee Structures Pvt. Ltd.
-/// Version: 1.0.20180419.16.03
+/// Version: 1.0.20180420.16.03
 /// </summary>
 public class TeklaLibrary
 {
